@@ -27,7 +27,7 @@ export default function HomePage() {
         <div className="profile">
           <div className="profile_container">
             <div className="profile_img">
-              <img src="/images/profile-pic.jpg" alt="Surpise" id="easterEgg" />
+              <img src="./images/profile-pic.jpg" alt="Surpise" id="easterEgg" />
             </div>
             <div>
               <h1 className="profile_name">
