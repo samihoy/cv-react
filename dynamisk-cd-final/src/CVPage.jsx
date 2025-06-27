@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom';
 export default function CVPage() {
   const [cvData, setCvData] = useState(null);
 
-  useEffect(() => {
-    fetch('/cvData.json')
-      .then((res) => res.json())
-      .then(setCvData)
-      .catch(console.error);
-  }, []);
+useEffect(() => {
+  const base = import.meta.env.BASE_URL;
+  fetch(`${base}cvData.json`)
+    .then((res) => res.json())
+    .then(setCvData)
+    .catch(console.error);
+}, []);
 
   if (!cvData) return <p>Loading CV...</p>;
 

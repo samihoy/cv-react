@@ -16,7 +16,7 @@ export default function AboutPage(){
   <div className="profile">
     <div className="profile_container">
       <div className="profile_img">
-        <img alt="Surpise" src="/images/profile-pic.jpg" />
+        <img alt="Surpise" src={`${import.meta.env.BASE_URL}images/profile-pic.jpg`} />
       </div>
       <div>
         <h1 className="profile_name">

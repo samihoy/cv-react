@@ -34,9 +34,11 @@ export default function useEasterEgg() {
 const handleImageClick = () => {
   if (egg) {
     const isOriginal = egg.src.includes("profile-pic");
+    const base = import.meta.env.BASE_URL;
+
     egg.src = isOriginal
-      ? "/images/My-alter-ego.jpg"
-      : "/images/profile-pic.jpg";
+      ? `${base}images/My-alter-ego.jpg`
+      : `${base}images/profile-pic.jpg`;
   }
 };
 
