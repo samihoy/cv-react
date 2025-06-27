@@ -1,0 +1,22 @@
+{
+  "name": "Max Backendson",
+  "age": 36,
+  "email": "max.backendson@example.com",
+  "phone": "+46 70 123 4567",
+  "summary": "Motivated and versatile professional with over a decade of experience...",
+  "workExperience": [
+    { "title": "Senior Security Analyst", "company": "NordGuard Security AB", "years": "2009–2023" },
+    { "title": "Retail Associate", "company": "CityMart", "years": "2015–2019" },
+    { "title": "Consultant", "company": "Strategic Ops", "years": "Ongoing" }
+  ],
+  "education": {
+    "degree": "BSc in Business and Security Management",
+    "school": "University of Stockholm",
+    "years": "2005–2008"
+  },
+  "skills": [
+    "Security Operations",
+    "Team Leadership",
+    "Retail & Inventory Management"
+  ]
+}
