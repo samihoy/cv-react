@@ -13,14 +13,14 @@ import NotFoundPage from './NotFoundPage';
 const basename = import.meta.env.DEV ? '/' : '/cv-react/';
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename={basename}>
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="/cv" element={<CVPage />} />
-      <Route path="/project" element={<ProjectsPage />} />
-      <Route path="/contact" element={<ContactPage />} />
-      <Route path="*" element={<NotFoundPage />} />
-    </Routes>
-  </BrowserRouter>
+<BrowserRouter basename={import.meta.env.BASE_URL}>
+  <Routes>
+    <Route path="" element={<HomePage />} />
+    <Route path="about" element={<AboutPage />} />
+    <Route path="cv" element={<CVPage />} />
+    <Route path="project" element={<ProjectsPage />} />
+    <Route path="contact" element={<ContactPage />} />
+    <Route path="*" element={<NotFoundPage />} />
+  </Routes>
+</BrowserRouter>
 );
