@@ -29,7 +29,9 @@ export default function AboutPage(){
         </p>
         <div>
           <br />
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel repellat blanditiis neque nobis commodi eius porro, a amet fugit saepe exercitationem. Eaque quos deleniti, odit aspernatur quasi saepe asperiores! Quia!
+          Hi, Huge Programming and study Nerd,  Realy into databases and system databases.
+          <br />
+          Autistic but in a good way ^^
         </div>
       </div>
     </div>

@@ -322,3 +322,19 @@ a{
 .project-card a:hover {
   text-decoration: underline;
 }
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.footer .contact {
+  text-align: center;
+}
+
+.footer .contact_info {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  align-items: center;
+}

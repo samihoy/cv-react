@@ -61,12 +61,12 @@ export default function HomePage() {
             <h3 className="title">Refernce</h3>
             <div className="ref_item">
               <h4 className="ref_name">Pontus Gustavson</h4>
-              <p><b>Madeup  companyname</b> <br />telephone number:</p>
+              <p><b>Madeup  companyname</b> <br />telephone number: 0707136087</p>
             </div>
-            <div className="ref_item">
+            {/* <div className="ref_item">
               <h4 className="ref_name">Sebastion hammar</h4>
               <p><b>Madeup company name</b> <br />Telephone number:</p>
-            </div>
+            </div> */}
           </div>
 
           <div className="edu">
