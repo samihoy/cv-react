@@ -24,13 +24,17 @@ export default function ProjectsPage() {
   return (
     <>
       <header className="top">
-        <div className="nav">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/cv">CV</Link></li>
-          <li><Link className="active" to="/project">Project</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </div>
+        <nav>
+          <ul className="nav">
+            <li><Link to="/home">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/cv">CV</Link></li>
+            <li><Link className='active' to="/project">Project</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/blogg">Blogg</Link></li>
+            <li><Link to="/easteregg">easteregg</Link></li>
+          </ul>
+        </nav>
       </header>
 
       <div className="projects-container">
