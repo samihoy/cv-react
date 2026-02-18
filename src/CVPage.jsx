@@ -1,31 +1,97 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import "./CSS/cvpage.css";
 
 export default function CVPage() {
-  const [cvData, setCvData] = useState(null);
-
-useEffect(() => {
-  const base = import.meta.env.BASE_URL;
-  fetch(`${base}cvData.json`)
-    .then((res) => res.json())
-    .then(setCvData)
-    .catch(console.error);
-}, []);
-
-  if (!cvData) return <p>Loading CV...</p>;
-
   return (
     <>
       <header className="top">
-        <div className="nav">
+        <nav className="nav">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link className="active" to="/cv">CV</Link></li>
           <li><Link to="/project">Project</Link></li>
           <li><Link to="/contact">Contact</Link></li>
-        </div>
+          <li><Link to="/blogg">Blogg</Link></li>
+        </nav>
+      </header>
 
-        <div className="profile">
+      <main>
+        <section className="resume-content">
+          <h1>Ressume</h1>
+
+          <h2>Max Lundberg</h2>
+          <p>Age: 36  |  Email: brormaximillianlundberg@protonmail.com  |  Phone: 070 725 44 21</p>
+
+          <h3>Professional Summary</h3>
+          <p>.NET C# Developer with focus on system development and databases
+          <p>Huge computor Nerd </p>
+          <p>Have previusly worked in Security related business</p>
+          </p>
+
+          <h3>Key Skills</h3>
+          <ul>
+            <li><strong>Languages</strong></li>
+            
+            <p>C#  |  SQL  |  Python  |  Javascript</p>
+            <p>HTML  |  CSS</p>
+  
+            <br />
+            <li><strong>Frameworks and Stacks</strong></li>
+            <p>Azure  |  Entity Framework  |  React  
+
+            <br />MVC  |  Blazor</p>
+            <br />
+            <li><strong>Other skills and tools im familiar with</strong></li>
+            <p>Linux  |  Docker  |  Yaml  | Bash</p>
+            <p>ADO | Databases setup and migrations  |  SystemDevelopment  </p>
+            <br />
+          </ul>
+
+          <h3>Work Experience</h3>
+          <ul>
+          <li><strong>Consultant</strong> | Adamantium Security | 20011–2016</li>
+          <li><strong>Consultant</strong> | PSG Bevakning | 2015–2025</li>
+          </ul>
+
+          <h3>References</h3>
+          <ul>
+            <li>Aldor Besher, Chas Academy E-post: aldor.besher@qlok.se, Tel: 076 697 20 30</li>
+            <li>Pontus Gustavsson, PSG Bevakning Tel: +46 70 713 60 87</li>
+          </ul>
+
+          <h3>Education</h3>
+          <p>Business Administration | Cybergymnasiet | 2005–2008</p>
+          <p>Fullstack .NET | Chas Academy | 2024-2026</p>
+
+  
+        </section>
+      </main>
+
+      <div>Additional information</div>
+    </>
+  );
+}
+
+{/*
+// const [cvData, setCvData] = useState(null);
+
+// useEffect
+// (
+//   () => 
+//   {
+//     const base = import.meta.env.BASE_URL;
+//     fetch(`${base}cvData.json`)
+//       .then((res) => res.json())
+//       .then(data => setCvData(data))
+//       .catch(console.error);
+//   }, 
+//   []
+// );
+
+//   if (!cvData) return <p>Loading CV...</p>;
+
+<div className="profile">
           <a className="downloadbtn" href="/Made upp Resume.pdf">Resume Download</a>
         </div>
 
@@ -52,10 +118,7 @@ useEffect(() => {
           <ul>
             {cvData.skills.map((skill, i) => <li key={i}>{skill}</li>)}
           </ul>
-        </section>
-      </header>
+        </section> */}
 
-      <div>Additional information</div>
-    </>
-  );
-}
+
+
