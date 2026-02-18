@@ -1,20 +1,25 @@
 import { Link } from 'react-router-dom';
-import useEasterEgg from './useEasterEgg';
+import useEasterEgg from './JS/useEasterEgg';
 
 export default function HomePage() {
   useEasterEgg();
   return (
     <>
-      <header className="top">
-        <nav className="nav">
-          <li><Link className="active" to="/">Home</Link></li>
+
+    <header className="top">
+      <nav>
+        <ul className="nav">
+          <li><Link className='active' to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/cv">CV</Link></li>
-          <li><Link to="/project">project</Link></li>
+          <li><Link to="/project">Project</Link></li>
           <li><Link to="/contact">Contact</Link></li>
-          <li><Link className="easteregg" to="/easteregg">easteregg</Link></li>
-        </nav>
-      </header>
+          <li><Link to="/blogg">Blogg</Link></li>
+          <li><Link to="/easteregg">easteregg</Link></li>
+        </ul>
+      </nav>
+    </header>
+
 
       <div id="easterEggModal" className="modal">
         <div className="modal-content">
