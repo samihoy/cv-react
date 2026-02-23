@@ -1,23 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
-:root{
-    --primary-color: #ff761f;
-    --text-color: #727171;
-}
-html{
-    font-size: 10px;
-}
-body{
-    font-family: 'inter', sans-serif ;
-    background-color:  black;
-    color: white;
-    list-style: none;
-}
 .description{
     margin-top: 1rem;
     font-size: 1.5rem;
@@ -99,7 +80,11 @@ a{
 }
 .profile_img{
     max-width: 250px;
+    height: 250px;
+    object-fit: fill;
+    display: block;
 }
+
 .profile_name_firstname{
     color: white;
     font-weight: 200;
@@ -190,17 +175,7 @@ a{
     color: var(--text-color);
 }
 
-.top{
-    font-family: i;
-}
-.nav{
-    display: flex;
-    font-size: 2rem;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-}
+
 .active{
     border: 1px;
     border-radius: 5px;
@@ -321,20 +296,4 @@ a{
 
 .project-card a:hover {
   text-decoration: underline;
-}
-.footer {
-  display: flex;
-  justify-content: center;
-  padding: 1rem 0;
-}
-
-.footer .contact {
-  text-align: center;
-}
-
-.footer .contact_info {
-  display: flex;
-  flex-direction: column;
-  gap: .25rem;
-  align-items: center;
 }
