@@ -1,57 +1,55 @@
-import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import PageLayout from './components/PageLayout';
+import { featuredProjects } from './data/projects';
+import './CSS/projects.css';
 
 export default function ProjectsPage() {
-  const [repos, setRepos] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-
-  useEffect(() => {
-    fetch('https://api.github.com/users/samihoy/repos')
-      .then(res => res.json())
-.then(data => {
-  setTimeout(() => {
-    setRepos(data);
-    setLoading(false);
-  }, 2000);
-})
-      .catch(err => {
-        console.error(err);
-        setLoading(false);
-      });
-  }, []);
-
   return (
-    <>
-      <header className="top">
-        <nav>
-          <ul className="nav">
-            <li><Link to="/home">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/cv">CV</Link></li>
-            <li><Link className='active' to="/project">Project</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-            <li><Link to="/blogg">Blogg</Link></li>
-            <li><Link to="/easteregg">easteregg</Link></li>
-          </ul>
-        </nav>
-      </header>
+    <PageLayout active="project">
 
-      <div className="projects-container">
-        {loading ? (
-          <p className="loading-text">Loading GitHub projects...</p>
-        ) : (
-          repos.map(repo => (
-            <div key={repo.id} className="project-card">
-              <h3>{repo.name}</h3>
-              <p>{repo.description || "No description provided"}</p>
-              <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-                View on GitHub
+      <main className="projects-page">
+        <section className="projects-intro">
+          <h1>Featured Projects</h1>
+          <p>
+            A selected set of projects I want to showcase. Click any project card or button to open the repository.
+          </p>
+        </section>
+
+        <section className="projects-grid">
+          {featuredProjects.map((project) => (
+            <article key={project.id} className="project-card">
+              <a
+                className="project-card-link"
+                href={project.repoUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="project-card-header">
+                  <h2>{project.title}</h2>
+                  <span className="project-status">{project.status}</span>
+                </div>
+
+                <div className="project-card-body">
+                  <p className="project-description">{project.description}</p>
+
+                  <ul className="project-tech-list">
+                  {project.tech.map((techItem) => (
+                    <li key={`${project.id}-${techItem}`}>{techItem}</li>
+                  ))}
+                  </ul>
+                </div>
               </a>
-            </div>
-          ))
-        )}
-      </div>
-    </>
+
+              <div className="project-actions">
+                <a href={project.repoUrl} target="_blank" rel="noreferrer">GitHub Repo</a>
+                {project.liveUrl && (
+                  <a href={project.liveUrl} target="_blank" rel="noreferrer">Live Demo</a>
+                )}
+              </div>
+            </article>
+          ))}
+        </section>
+      </main>
+
+    </PageLayout>
   );
 }
