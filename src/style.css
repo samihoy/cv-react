@@ -1,4 +1,3 @@
-
 .description{
     margin-top: 1rem;
     font-size: 1.5rem;
@@ -6,7 +5,7 @@
     color: var(--text-color);
 }
 
-/* comon styles*/
+/* common global styles */
 
 img{
     width: 100%;
@@ -30,7 +29,6 @@ a{
     font-size: 1.6rem;
     color: white;
     font-weight: 500;
-
 }
 .item_subtitle{
     font-size: 1.4rem;
@@ -38,150 +36,13 @@ a{
     font-weight: 400;
 }
 
-/* layouts*/
-
-.container{
-    max-width: 1000px;
-    width: 90%;
-    margin: 0 auto;
-    display: grid;
-    padding: 5rem;
-    background-color: rgb(35, 29, 29);
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-}
-
-@media only screen and (max-width: 768px){
-    .container{
-        width: 100%;
-        grid-template-columns: 1fr;
-        padding: 3rem;
-        gap: 7rem;
-    }
-    .profile_container{
-        flex-direction: column;
-    }
-}
-
-.profile{
-    grid-column: 1/-1;
-    margin-bottom: 2rem ;
-}
-.group-1, .group-2{
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-}
-/* profile */
-
-.profile_container{
-    display: flex;
-    gap: 2rem;
-}
-.profile_img{
-    max-width: 250px;
-    height: 250px;
-    object-fit: fill;
-    display: block;
-}
-
-.profile_name_firstname{
-    color: white;
-    font-weight: 200;
-    font-size: clamp(2rem, 8vw, 4rem);
-    text-transform: uppercase;
-    display: block;
-    margin-bottom:-0.8rem;
-}
-.profile_name_lastname{
-    color: rgb(245, 6, 6);
-    font-weight: 700;
-    font-size: clamp(2.5rem, 15vw, 7rem);
-    text-transform: uppercase;
-    display: block;
-}
-.profile_title{
-    font-size: 1.5rem;
-    font-weight: 400;
-    text-transform: uppercase;
-
-}
-.downloadbtn{
-    display: block;
-    text-decoration: underline;
-    font-size: 1.6rem;
-    margin-top: 1rem;
-}
-.downloadbtn:hover{
-    color: var(--primary-color);
-}
-
-/* expertise */
-
-.skill_list{
-    margin-top: 1rem;
-    margin-left: 2rem;
-    line-height: 2;
-}
-
-/* reference */
-
-.ref_item{
-    margin-top: 2rem;
-}
-.ref_name{
-    font-size: 1.6rem;
-    font-weight: 700;
-}
-
-/* education */
-
-.edu_item{
-    margin-top: 2rem;
-}
-
-/* certification */
-
-.certification_item{
-    margin-top: 2rem;
-}
-
-/* experience */
-.exp_item{
-    margin-top: 2rem;
-}
-
-/* experience */
-.awards_item{
-    margin-top: 2rem;
-}
-
-/* experience */
-
-.interest_items{
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-.interest_item{
-    font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    color: var(--text-color);
-}
-
-
 .active{
     border: 1px;
     border-radius: 5px;
     color: black;
     background-color: white;
 }
+
 .cardmodal{
     display: none;
     justify-content: center;
@@ -190,7 +51,6 @@ a{
     height: 100%;
     background-color: white;
     color: black;
-
 }
 .githubimage{
     width: 50px;
@@ -203,23 +63,20 @@ a{
 }
 .modal{
     display: none;
-
 }
 #project-card1:target,
 #project-card2:target{
     display: flex;
-
-
 }
 .close{
     display: inline-block;
     color: black;
     border: 1px solid;
-
 }
 .easteregg{
     color: black;
 }
+
 @media print {
   body {
     font-family: Arial, sans-serif;
@@ -239,61 +96,4 @@ a{
   .profile {
     margin-bottom: 2em;
   }
-}
-
-
-
-
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 2rem;
-}
-
-.project-card {
-  background-color: #f9f9f9;
-  border: 2px solid #ccc;
-  border-radius: 12px;
-  padding: 1.5rem;
-  width: 300px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
-}
-
-.project-card:hover {
-  transform: scale(1.03);
-}
-
-.loading-text {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-top: 2rem;
-  color: #555;
-}
-
-.project-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  color: #222;
-}
-
-.project-card p {
-  font-size: 1.05rem;
-  color: #444;
-}
-
-.project-card a {
-  display: inline-block;
-  margin-top: 1rem;
-  color: #007bff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.project-card a:hover {
-  text-decoration: underline;
 }
