@@ -1,20 +1,11 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import PageLayout from './components/PageLayout';
 import "./CSS/cvpage.css";
 
 export default function CVPage() {
   return (
-    <>
-      <header className="top">
-        <nav className="nav">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link className="active" to="/cv">CV</Link></li>
-          <li><Link to="/project">Project</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-          <li><Link to="/blogg">Blogg</Link></li>
-        </nav>
-      </header>
+    <PageLayout active="cv">
+
+      <br />
 
       <main>
         <section className="resume-content">
@@ -69,7 +60,8 @@ export default function CVPage() {
       </main>
 
       <div>Additional information</div>
-    </>
+
+    </PageLayout>
   );
 }
 
