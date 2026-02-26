@@ -1,24 +1,11 @@
-import { Link } from 'react-router-dom';
+import PageLayout from './components/PageLayout';
+import './CSS/home.css';
 import useEasterEgg from './JS/useEasterEgg';
 
 export default function HomePage() {
   useEasterEgg();
   return (
-    <>
-
-    <header className="top">
-      <nav>
-        <ul className="nav">
-          <li><Link className='active' to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/cv">CV</Link></li>
-          <li><Link to="/project">Project</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-          <li><Link to="/blogg">Blogg</Link></li>
-          <li><Link to="/easteregg">easteregg</Link></li>
-        </ul>
-      </nav>
-    </header>
+    <PageLayout active="home">
 
 
       <div id="easterEggModal" className="modal">
@@ -125,17 +112,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <footer className="footer">
-          <div className="contact">
-            <h3 className="title">contact</h3>
-            <div className="contact_info">
-              <p className="description easteregg">Porthansvägen 12</p>
-              <p className="description">0707254421</p>
-              <p className="description">brormaximillianlundberg@protonmail.com</p>
-            </div>
-          </div>
-        </footer>
       </div>
-    </>
+    </PageLayout>
   );
 }
