@@ -1,22 +1,9 @@
-import { Link } from 'react-router-dom';
+import PageLayout from './components/PageLayout';
+import './CSS/about.css';
 
 export default function AboutPage(){
     return (
-        <>
-    <header className="top">
-      <nav>
-        <ul className="nav">
-          <li><Link to="/home">Home</Link></li>
-          <li><Link className='active'to="/about">About</Link></li>
-          <li><Link to="/cv">CV</Link></li>
-          <li><Link to="/project">Project</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-          <li><Link to="/blogg">Blogg</Link></li>
-          <li><Link to="/easteregg">easteregg</Link></li>
-        </ul>
-      </nav>
-    </header>
-
+        <PageLayout active="about">
 <div className="container">
   <div className="profile">
     <div className="profile_container">
@@ -118,20 +105,7 @@ export default function AboutPage(){
           </div>
         </div>
 
-        <footer className="footer">
-          <div className="contact">
-            <h3 className="title">contact</h3>
-            <div className="contact_info">
-              <p className="description easteregg">Porthansvägen 12</p>
-              <p className="description">0707254421</p>
-              <p className="description">brormaximillianlundberg@protonmail.com</p>
-            </div>
-          </div>
-        </footer>
 </div>
-
-
-
-</>
+    </PageLayout>
     );
 }
