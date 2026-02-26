@@ -1,5 +1,5 @@
 import PageLayout from './components/PageLayout';
-import "./CSS/cvpage.css";
+import "./CSS/CVpage.css";
 
 export default function CVPage() {
   return (
