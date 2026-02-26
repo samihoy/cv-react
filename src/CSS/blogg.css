@@ -1,0 +1,144 @@
+.blogg-layout{
+  width: 100%;
+  margin: 2rem 0 0;
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1000px) minmax(240px, 340px) 1fr;
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+  align-items: start;
+}
+
+.blogg-main-wrap{
+  grid-column: 2;
+}
+
+.blogg-aside{
+  grid-column: 3;
+}
+
+.blogg-container{
+  width: 100%;
+  margin: 0;
+  padding: 2.75rem;
+  background-color: rgb(35, 29, 29);
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.blogg-post,
+.blogg-card{
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.blogg-post-title{
+  margin: 0 0 0.5rem;
+  font-size: 2.1rem;
+}
+
+.blogg-post-meta{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: rgba(255,255,255,0.75);
+  font-size: 1.05rem;
+}
+
+.blogg-post-meta.bottom{
+  margin-top: 1rem;
+}
+
+.blogg-post-meta .dot{
+  opacity: 0.7;
+}
+
+.blogg-sep{
+  border-top: 1px solid rgba(255,255,255,0.15);
+  margin: 1rem 0;
+}
+
+.blogg-sep.small{
+  margin: 0.9rem 0;
+}
+
+.blogg-post-body p{
+  margin: 0 0 1rem;
+  line-height: 1.6;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.blogg-post-body p:last-child{
+  margin-bottom: 0;
+}
+
+.blogg-post-footer{
+  margin-top: 1rem;
+}
+
+.blogg-tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.blogg-tag{
+  font-size: 0.95rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  color: #fff;
+}
+
+.blogg-tags.aside{
+  margin-top: 0.75rem;
+}
+
+.blogg-author-img{
+  width: 100%;
+  max-height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.blogg-card-text{
+  margin: 0;
+  line-height: 1.5;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.blogg-stats{
+  display: grid;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+.blogg-stat-row{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: rgba(255,255,255,0.85);
+  font-size: 1.05rem;
+}
+
+@media (max-width: 900px){
+  .blogg-layout{
+    grid-template-columns: 1fr;
+    width: min(1100px, 92%);
+    margin: 2rem auto 0;
+  }
+
+  .blogg-main-wrap,
+  .blogg-aside{
+    grid-column: auto;
+  }
+
+  .blogg-container{
+    padding: 2.25rem;
+  }
+}

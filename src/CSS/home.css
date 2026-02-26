@@ -1,0 +1,120 @@
+.container{
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    padding: 5rem;
+    background-color: rgb(35, 29, 29);
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.profile{
+    grid-column: 1/-1;
+    margin-bottom: 2rem ;
+}
+.group-1, .group-2{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.profile_container{
+    display: flex;
+    gap: 2rem;
+}
+.profile_img{
+    max-width: 250px;
+    height: 250px;
+    object-fit: fill;
+    display: block;
+}
+
+.profile_name_firstname{
+    color: white;
+    font-weight: 200;
+    font-size: clamp(2rem, 8vw, 4rem);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom:-0.8rem;
+}
+.profile_name_lastname{
+    color: rgb(245, 6, 6);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 15vw, 7rem);
+    text-transform: uppercase;
+    display: block;
+}
+.profile_title{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.downloadbtn{
+    display: block;
+    text-decoration: underline;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+.downloadbtn:hover{
+    color: var(--primary-color);
+}
+
+.skill_list{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    line-height: 2;
+}
+
+.ref_item{
+    margin-top: 2rem;
+}
+.ref_name{
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.edu_item{
+    margin-top: 2rem;
+}
+
+.certification_item{
+    margin-top: 2rem;
+}
+
+.exp_item{
+    margin-top: 2rem;
+}
+
+.awards_item{
+    margin-top: 2rem;
+}
+
+.interest_items{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.interest_item{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+}
+
+@media only screen and (max-width: 768px){
+    .container{
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        gap: 7rem;
+    }
+    .profile_container{
+        flex-direction: column;
+    }
+}

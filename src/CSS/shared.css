@@ -41,19 +41,22 @@ html
 {
     display: flex;
     font-size: 2rem;
-    gap: 1rem;
+    gap: 3.5ch;
     justify-content: center;
     align-items: center;
     list-style: none;
 }
 
-/* Fotter CSS */
+/* Footer CSS */
 
 .footer
 {
+  width: min(1100px, 92%);
+  margin: 4rem auto 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
   display: flex;
   justify-content: center;
-  padding: 1rem 0;
 }
 
 .footer .contact
@@ -61,10 +64,70 @@ html
   text-align: center;
 }
 
+.footer .contact .title
+{
+  font-size: 1.6rem;
+  margin-bottom: .75rem;
+}
+
 .footer .contact_info
 {
   display: flex;
   flex-direction: column;
-  gap: .25rem;
+  gap: .35rem;
   align-items: center;
+}
+
+.footer .contact_info .description
+{
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.not-found-page
+{
+  width: min(1100px, 92%);
+  margin: 3rem auto;
+  text-align: center;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.not-found-page h1
+{
+  font-size: 3rem;
+}
+
+.not-found-page p
+{
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+
+.not-found-link
+{
+  font-size: 1.6rem;
+  text-decoration: underline;
+}
+
+
+.page-shell
+{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-main
+{
+  flex: 1;
+}
+
+.top
+{
+  width: min(1100px, 92%);
+  margin: 1.75rem auto 0;
 }
