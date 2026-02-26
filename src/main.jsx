@@ -9,6 +9,7 @@ import AboutPage from './AboutPage';
 import CVPage from './CVPage';
 import ProjectsPage from './ProjectsPage';
 import ContactPage from './ContactPage';
+import AIMePage from './AIMePage';
 import Blogg from './blogg';
 import NotFoundPage from './NotFoundPage';
 
@@ -20,6 +21,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="/cv" element={<CVPage />} />
       <Route path="/project" element={<ProjectsPage />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="/ai-me" element={<AIMePage />} />
       <Route path="/blogg" element={<Blogg />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
