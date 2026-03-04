@@ -40,12 +40,17 @@ export default function HomePage() {
             <h3 className="title">Languages and Frameworks</h3>
             <ul className="skill_list description">
               <li>C# / .NET</li>
+              <li>Entity Framework</li>
+              <li>SQL </li>
+              <li>Clean Architecture</li>
+              <li>Datbase Migrations</li>
+              <li>React</li>
               <li>Python</li>
+              <li>Entity Framework</li>
               <li>Html</li>
               <li>CSS</li>
-              <li>React</li>
-              <li>Entity Framework</li>
-              <li>SQL</li>
+              <li>AI/Agent mode</li>
+              <li>Content manegment systems (bootstrap etc)</li>
             </ul>
           </div>
 
