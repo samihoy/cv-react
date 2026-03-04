@@ -30,7 +30,7 @@ export default function HomePage() {
               <p className="description">
                 Hi my Name is Max and im a Fullstack .NET developer with focude on system development and databases
               </p>
-              <a className="downloadbtn" href="/Made upp Resume.pdf">Resume</a>
+              
             </div>
           </div>
         </div>
@@ -52,8 +52,8 @@ export default function HomePage() {
           <div className="ref">
             <h3 className="title">Refernce</h3>
             <div className="ref_item">
-              <h4 className="ref_name">Pontus Gustavson</h4>
-              <p><b>Madeup  companyname</b> <br />telephone number: 0707136087</p>
+              <h4 className="ref_name">Aldor Besher</h4>
+              <p><b>Chas Academy - Lärare</b> <br />telephone number: 076 697 20 30</p>
             </div>
             {/* <div className="ref_item">
               <h4 className="ref_name">Sebastion hammar</h4>
